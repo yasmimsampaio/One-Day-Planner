@@ -39,6 +39,7 @@ function loadData (){
 //function save data
 function saveData (){
     console.log("hi");
+    console.log($(this).siblings(".description").val());
     //event handled when you click save button
     //event time
     //convert to military time ‘+12’
