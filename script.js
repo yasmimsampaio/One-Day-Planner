@@ -39,13 +39,15 @@ function loadData (){
 //function save data
 function saveData (){
     console.log("hi");
-    console.log($(this).siblings(".description").val());
+    var note = $(this).siblings(".description").val();
+    var time = $(this).siblings(".hour").children().prevObject[0].outerText;
     //event handled when you click save button
     //event time
     //convert to military time ‘+12’
     //set index = military time - 9
     //save incoming text in array
     //save array in local storage
+    localStorage.setItem(time, note);
 }
 
 $(".saveBtn").on("click", saveData);
